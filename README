@@ -1,3 +1,1 @@
-patch
-python+twisted
-map_csv_creater
+pyeco: https://github.com/pyeco/pyeco
