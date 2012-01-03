@@ -31,7 +31,7 @@ def get_config(path=None):
 
 def get_last_user_name():
 	try:
-		cfg = get_config("pyecoluancher.ini")
+		cfg = get_config("pyecolauncher.ini")
 		return cfg.get("main", "last_user_name")
 	except:
 		return ""
@@ -40,7 +40,7 @@ def set_last_user_name(name):
 	cfg = get_config()
 	cfg.add_section("main")
 	cfg.set("main", "last_user_name", name)
-	cfg.write(open("pyecoluancher.ini", "wb"))
+	cfg.write(open("pyecolauncher.ini", "wb"))
 
 def main():
 	check_eco_exe()
