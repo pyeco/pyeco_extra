@@ -52,12 +52,13 @@ def main():
 			"please input user name or press return to use [%s]: "%user_name).strip()
 		if input_text:
 			user_name = input_text
-	while not user_name:
-		user_name = raw_input("please input user name: ").strip()
+	else:
+		while not user_name:
+			user_name = raw_input("please input user name: ").strip()
+		set_last_user_name(user_name)
 	while not user_password:
 		user_password = getpass.getpass(
 			"please input user password [hidden input]: ").strip()
-	set_last_user_name(user_name)
 	command = "eco.exe /launch /path %s -u:%s -p:%s"%(
 				os.getcwd(),
 				user_name,
