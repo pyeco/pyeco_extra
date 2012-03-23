@@ -55,7 +55,7 @@ def main():
 	else:
 		while not user_name:
 			user_name = raw_input("please input user name: ").strip()
-		set_last_user_name(user_name)
+	set_last_user_name(user_name)
 	while not user_password:
 		user_password = getpass.getpass(
 			"please input user password [hidden input]: ").strip()
